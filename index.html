@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body{
+      width: 1440px;
+      height: 100vh;
+      font-family: "Open sans";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+   
+
+    .container{
+      height: 95%;
+      width: 65%;
+      /* padding: 30px; */
+    }
+    .container-1{
+      background-color: #FFFFFF;
+    }
+    .logo-1{
+      width:120px;
+      height: 40px;
+      
+    }
+    .top{
+      display: flex;
+      padding-bottom: 40px;
+      padding-top: 20px;
+      padding-left: 20px;
+      justify-content: space-between;
+    }
+    .nav{
+      display: flex;    
+      padding-right: 15px;
+    }
+    .image-1{
+      width:300px;
+      height:200px;
+    }
+    .container-1a{
+      display: flex;
+      padding-bottom: 150px;
+      background-image: url("images/bg-curve-desktop.svg");
+      background-repeat: no-repeat;
+      background-position: 45% 100%;
+    }
+    .flow{
+      display: flex;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+    .container-1b{
+      display: flex;
+      background-color: #F9F8FF;
+      
+    }
+    .image-2{
+      width: 300px;
+      height: 200px;
+    }
+    .guy{
+      width:20px;
+      height:20px;
+      border-radius: 50%;
+      margin-top: 2px;
+    }
+    .files{
+      font-weight: bolder;
+      font-size: 20px;
+      width: 50%;
+      color: #07033B;
+      padding-left: 20px;
+    }
+    .cont-1{
+      font-size: 10px;
+      width:50%;
+      padding-left: 20px;
+      padding-top: 10px;
+      color: #07033B;
+    }
+    form{
+      padding-left: 20px;
+      padding-top: 10px;
+    
+    }
+    #email{
+      width:30%;
+      height:30px;
+      border: 1px solid black;
+      border-radius: 3px;
+      margin-right: 10px;
+    }
+    #start{
+      width: 20%;
+      height:35px;
+      background-color: #1167FF;
+      border:1px solid #1167FF;
+      border-radius: 4px;
+      color: white;
+    }
+    .stay{
+      font-weight: bolder;
+      font-size: 20px;
+      width: 55%;
+      color: #07033B;
+      padding-left: 20px;
+      
+    }
+    .cont-2{
+      font-size: 10px;
+      width:53%;
+      padding-left: 20px;
+      padding-top: 10px;
+      color: #07033B;
+    }
+    .see{
+      color: #66BEAF;
+      text-decoration:underline;
+      font-size: 11px; 
+      padding-left: 20px;
+    }
+    .arrow{
+      padding-left: 5px;
+    }
+    .container-1d{
+      background-color: white;
+      box-shadow: 5px 5px 5px #F5F5F7;
+      margin-bottom: 40px;
+      width: 40%;
+      margin-left: 20px;
+      border-radius: 4px;
+    }
+    .quotes{
+      width:7px;
+      height:9px;
+      padding-left: 20px;
+      padding-top: 20px;
+    }
+    .cont-3{
+      font-size: 10px;
+      /* width:53%; */
+      padding-left: 20px;
+      padding-top: 10px;
+      color: #07033B;
+    }
+    .house{
+      display: flex;
+      padding-top: 10px;
+      margin-left: 20px;
+      padding-bottom: 30px;
+    }
+    .both{
+      padding-left: 6px;
+    }
+    .name{
+      color:#07033B;
+      font-size: 11px;
+      font-weight: bold;
+    }
+    .job{
+      color:#757182;
+      font-size: 10px;
+    }
+    .low{
+      background-color: #57598D;
+      height: 200px;
+      display: flex;
+    }
+    .early{
+      padding-top: 60px;
+      padding-left: 20px;
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .cont-4{
+      color:#FFFFFF;
+      padding-left: 20px;
+      padding-top: 10px;
+      font-size: 11px;
+      width: 59%;
+      padding-bottom: 50px;      
+    }
+    #start-2{
+      width: 40%;
+      height:35px;
+      background-color: #1167FF;
+      border:1px solid #1167FF;
+      border-radius: 4px;
+      color: white;
+      /* margin-bottom: 20px; */
+    }
+    #email-2{
+      width:300px;
+      /* height:30px; */
+      border: 1px solid white;
+      border-radius: 3px;
+      margin-right: 100px;
+      margin-top: 50px;
+      margin-bottom: 8px;
+      padding: 10px;
+      
+    }
+    ::placeholder{
+      opacity: 0.3;
+    }
+    .lowest{
+      background-color: #08043E;
+      display: flex;
+      color: #FFFFFF;
+      justify-content: space-around;
+    }
+    .logo-2{
+      width:120px;
+      height: 40px;
+      filter: brightness(0) invert(1);
+      padding-top: 100px;
+      padding-left: 30px;
+      
+    }
+    .phone{
+      display: flex;
+      padding-top: 30px;
+      font-size: 13px;
+    
+    }
+    .mess{
+      display: flex;
+      padding-bottom: 60px;
+      padding-top: 20px;
+      font-size: 13px;
+    }
+    .num{
+      padding-left: 8px;
+    }
+    .about{
+      padding-top: 170px;
+    }
+    .ab{
+      font-size: 13px;
+      padding-bottom: 10px;
+    }
+    .abc{
+      font-size: 13px;
+      padding-bottom: 50px;
+    }
+    #features{
+      padding-right: 30px;
+      color: #81828F;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <div class="container-1">
+    <div class="top">
+      <div> <img class="logo-1"src="images/logo.svg"></div>
+      <div class="nav">
+        <div id="features">Features</div>
+        <div id="features">Team</div>
+        <div id="features">Sign In</div>
+      </div>
+    </div>
+  
+    <div class="container-1a">    
+      <div>
+        <div class="files">All your files in one secure location, accessible anywhere.</div>
+        <div class="cont-1">
+          Fylo stores your most important files in one secure location. 
+          Access them wherever you need, share and collaborate with friends, 
+          family, and co-workers.
+        </div> 
+        <form>
+          <input type="email" id="email"placeholder="Enter your email...">
+          <input type="submit" id="start" value="Get Started">
+        </form>
+      </div>
+      <div><img class="image-1" src="images/illustration-1.svg"></div>
+
+    </div>
+    <div class="b-g">
+      <div class="container-1b">
+        <div class="container-1c">
+          <div>
+            <div class="stay">Stay productive, wherever you are</div>  
+            <div class="cont-2">Never let location be an issue when accessing your files. Fylo has you 
+              covered for all of your file storage needs.</div>  
+            <div class="cont-2">Securely share files and folders with friends, family and colleagues for 
+              live collaboration. No email attachments required!</div>  
+            <div class="flow">
+              <a href=""id="#features"class="see">See how Fylo works</a>
+              <div><img class="arrow"src="images/icon-arrow.svg"></div>
+            </div>
+          </div>
+      
+          <div class="container-1d">
+            <div><img  class="quotes"src="images/icon-quotes.svg"></div>
+            <div class="cont-3">
+              Fylo has improved our team productivity by an order of magnitude. Since 
+              making the switch our team has become a well-oiled collaboration machine.
+            </div>
+            <div class="house">
+              <div><img class="guy"src="images/avatar-testimonial.jpg"></div>
+              <div class="both">
+                <div class="name">Kyle Burton</div>
+                <div class="job">Founder & CEO, Huddle</div>
+              </div>
+            </div>
+          </div>
+        </div>     
+        <div>
+          <img class="image-2"src="images/illustration-2.svg">
+        </div>
+    </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="low">
+      <div>
+        <div class="early">Get early access today</div> 
+        <div class="cont-4">
+          It only takes a minute to sign up and our free starter tier is extremely generous. 
+          If you have any questions, our support team would be happy to help you.
+        </div>
+      </div>
+      <form>
+        <input type="email" id="email-2"placeholder="email@example.com"><br>
+        <input type="submit" id="start-2" value="Get Started For Free">
+      </form>
+    </div>
+
+   <div class="lowest">
+     <div>
+       <div><img class="logo-2"src="images/logo.svg"></div>
+       <div class=phone>
+         <div><img src="images/icon-phone.svg"></div>
+         <div class="num">Phone: +1-543-123-4567</div>
+       </div>
+       <div class="mess">
+          <div><img src="images/icon-email.svg"></div>
+         <div class="num">example@fylo.com</div>
+       </div>
+      </div>
+      <div class="about">
+        <div class="ab">About Us</div>
+        <div class="ab">Jobs</div>
+        <div class="ab">Press</div>
+        <div class="abc">Blog</div>
+      </div>
+      <div class="about">
+        <div class="ab">Contact Us</div>
+        <div class="ab">Terms</div>
+        <div class="ab">Privacy</div>
+      </div>
+      <!-- <div>
+        <img src="images/facebook.jpeg">
+        <img src="images/twitter...png">
+        <img src="images/instagram.png">
+      </div> -->
+   </div> 
+  </div>
+</div>
+
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer> -->
+</body>
+</html>
